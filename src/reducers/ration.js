@@ -14,10 +14,10 @@ import {
 
 
 const defaultGoal = {
-    calories: 0,
-    carbs: 0,
-    fat: 0,
-    protein: 0,
+    calories: 2000,
+    carbs: 170,
+    fat: 80,
+    protein: 130,
 };
 
 const initialState = {
