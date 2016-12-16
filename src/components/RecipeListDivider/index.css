@@ -1,0 +1,11 @@
+.recipe-list-divider {
+      position: relative;
+      height: 40px;
+      font-size: 32px;
+      font-family: Roboto;
+      color: black;
+      list-style-type: none;
+      background-color: white;
+      display: flex;
+      text-transform: capitalize;
+}

@@ -1,0 +1,8 @@
+.recipe-list-item {
+  list-style-type: none;
+  overflow: none;
+}
+
+.slider-list {
+    transition: .3s ease-in-out;
+}
