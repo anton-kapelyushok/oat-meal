@@ -36,22 +36,22 @@ const defaultGoalProperties = [{
     name: 'calories',
     visibleName: 'calories',
     min: 0,
-    max: 100,
+    max: 2500,
 }, {
     name: 'protein',
     visibleName: 'squirrels',
     min: 0,
-    max: 200,
+    max: 400,
 }, {
     name: 'carbs',
     visibleName: 'carbowhatever',
     min: 0,
-    max: 50,
+    max: 400,
 }, {
     name: 'fat',
     visibleName: 'fats',
     min: 0,
-    max: 1000,
+    max: 250,
 }];
 
 const defaultCurrentGoal = {

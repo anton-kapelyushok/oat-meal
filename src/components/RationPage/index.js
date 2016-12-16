@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import GoalSelector from '../GoalSelector';
+import NutrionBarChart from '../NutrionChart/index.js'
 import RecipeList from '../RecipeList';
 
 import * as LoadingState from '../../constants/loading-status';
@@ -21,6 +22,7 @@ export default class RationPage extends Component {
                          </div>);
         return (
             <div>
+                <NutrionBarChart data={this.props.currentGoal}/>
                 <GoalSelector
                     onGoalChanged={this.handleGoalChange.bind(this)}
                     currentGoal={this.props.currentGoal}
