@@ -27,9 +27,9 @@ export default class RecipeListItem extends Component {
                     slidesToShow={1.5}
                     decorators={[]}
                     slideWidth={"680px"}
-                    draggin={false}
+                    dragging={false}
                 >
-                    {this.props.data.map((recipe, index) => <Recipe key={recipe.recipe.id} data={recipe}
+                    {this.props.data.map((recipe, index) => <Recipe doomed={this.state.i!==index} key={recipe.recipe.id} data={recipe}
                     onClick={this.handleClick.bind(this, index)}/>)}
                 </Carousel>
             </li>

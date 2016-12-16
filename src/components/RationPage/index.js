@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import GoalSelector from '../GoalSelector';
 import RecipeList from '../RecipeList';
+import Header from '../Header';
 
 import * as LoadingState from '../../constants/loading-status';
 
@@ -15,12 +16,13 @@ export default class RationPage extends Component {
                         <div className="recipes-wrapper">
                             {this.props.recipes &&
                                 <RecipeList
-                                    recipes={this.props.recipes} 
+                                    recipes={this.props.recipes}
                                     replacements={this.props.replacements}
                                 />}
                          </div>);
         return (
             <div>
+                <Header />
                 <GoalSelector
                     onGoalChanged={this.handleGoalChange.bind(this)}
                     currentGoal={this.props.currentGoal}

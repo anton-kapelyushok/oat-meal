@@ -3,7 +3,8 @@ import './index.css';
 
 export default class Recipe extends Component {
     render () {
-        const backgroundStyle = `linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url("${this.props.data.recipe.data.image}")`;
+        const doomLevel = this.props.doomed ? 0.6 : 0.3;
+        const backgroundStyle = `linear-gradient( rgba(0, 0, 0, ${doomLevel}), rgba(0, 0, 0, ${doomLevel}) ), url("${this.props.data.recipe.data.image}")`;
         return (
             <div
                 onClick={this.props.onClick}
@@ -42,4 +43,5 @@ export default class Recipe extends Component {
 Recipe.propTypes = {
     data: PropTypes.object.isRequired,
     additional: PropTypes.object,
+    doomed: PropTypes.bool,
 };

@@ -10,7 +10,7 @@
   font-family: Roboto;
   color: white;
   justify-content: space-between;
-  background-size:cover;
+  background-size:cover !important;
   margin-top: 5px;
 }
 
