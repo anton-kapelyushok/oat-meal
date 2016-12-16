@@ -20,9 +20,7 @@ export const submitNewGoal = () => (dispatch, getState) => {
         return;
     }
     dispatch({ type: START_RECIPES_FETCHING });
-    fetch(RATION_ENDPOINT, {
-        qs: goal,
-    })
+    fetch(RATION_ENDPOINT + `?calories=${goal.calories}&carbs=${goal.carbs}&fat=${goal.fat}&protein=${goal.protein}`)
         // Promise.resolve(require('./recipes.js'))
     .then(response => {
         if (!response.ok) {

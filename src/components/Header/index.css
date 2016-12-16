@@ -1,0 +1,36 @@
+.header {
+    height: 50px;
+    display: flex;
+    /*max-width: 1000px;*/
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fbc620;
+    padding-left: 20px;
+    padding-right: 20px;
+    flex: 1;
+}
+
+.header-logo, .header-avatar {
+    height: 20px;
+}
+
+.header-nav {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    font-face: Roboto;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+.header-nav > li {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 24px;
+}
+
+.header-nav > li.selected {
+    text-decoration: underline;
+    font-weight: bold;
+}

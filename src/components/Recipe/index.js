@@ -6,6 +6,7 @@ export default class Recipe extends Component {
         const doomLevel = this.props.doomed ? 0.6 : 0.3;
         const backgroundStyle = `linear-gradient( rgba(0, 0, 0, ${doomLevel}), rgba(0, 0, 0, ${doomLevel}) ), url("${this.props.data.recipe.data.image}")`;
         return (
+            <div>
             <div
                 onClick={this.props.onClick}
                 className="recipe"
@@ -35,6 +36,7 @@ export default class Recipe extends Component {
                     <a className="recipe-addtobookmark">Add to bookmark<i className="icon material-icons">bookmark</i></a>
                     <a className="recipe-learnmore">Learn more</a>
                 </div>
+            </div>
             </div>
         );
     }

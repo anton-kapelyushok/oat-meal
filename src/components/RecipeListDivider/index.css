@@ -1,9 +1,13 @@
 .recipe-list-divider {
       position: relative;
-      height: 40px;
+      display: flex;
+      justify-content: flex-end;
+      left: -1230px;
+      height: 0px;
       font-size: 32px;
       font-family: Roboto;
       color: black;
+      text-align: right;
       list-style-type: none;
       background-color: white;
       display: flex;

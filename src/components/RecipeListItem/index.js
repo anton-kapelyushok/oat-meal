@@ -21,17 +21,7 @@ export default class RecipeListItem extends Component {
         const length = this.props.data.length;
         return (
             <li className="recipe-list-item">
-                <Carousel
-                    slideIndex={this.state.i}
-                    cellAlign="center"
-                    slidesToShow={1.5}
-                    decorators={[]}
-                    slideWidth={"680px"}
-                    dragging={false}
-                >
-                    {this.props.data.map((recipe, index) => <Recipe doomed={this.state.i!==index} key={recipe.recipe.id} data={recipe}
-                    onClick={this.handleClick.bind(this, index)}/>)}
-                </Carousel>
+                <Recipe data={this.props.data[0]} />
             </li>
         );
     }

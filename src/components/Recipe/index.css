@@ -1,11 +1,9 @@
 .recipe {
-  position: relative;
-  height: 200px;
-  width: 600px;
+  height: 120px;
+  width: 500px;
   background-color: gray;
   list-style-type: none;
   display: flex;
-  margin: 0;
   padding: 24px;
   font-family: Roboto;
   color: white;
@@ -21,9 +19,15 @@
 }
 
 .recipe-title {
-    max-width: 400px;
-  font-size: 32px;
+ width: 350px;
+ height: 100px;
+ line-height: 1.5em;
+     height: 3em;       /* height is 2x line-height, so two lines will display */
+     overflow: hidden;
+  font-size: 24px;
   text-transform: uppercase;
+
+text-overflow: ellipsis;
   font-weight: bold;
 }
 
@@ -58,6 +62,7 @@
   cursor: pointer;
   text-transform: uppercase;
   display: flex;
+  text-align: right;
   align-items: center;
 }
 

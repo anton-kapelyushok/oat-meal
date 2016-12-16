@@ -10,8 +10,8 @@ export default class Header extends Component {
             <img className="header-logo" src={logo} />
             <ul className="header-nav">
                 {targets.map((target, index) => {
-                    return (<li className={index === this.props.selectedTabNumber && ""}>
-                    <a href="#">{target}</a>
+                    return (<li className={index === this.props.selectedTabNumber && "selected"}>
+                    <a>{target}</a>
                     </li>);
                 })}
             </ul>

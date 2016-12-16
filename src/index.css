@@ -11,3 +11,9 @@ body {
     width: 15px;
     height: 15px;
 }
+
+.pageWrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
