@@ -25,7 +25,7 @@ export default class RecipeView extends Component {
                     <i className="icon material-icons">clear</i>
                     </div>
                     <div className="recipe-view-content">
-                        <h1>{this.props.data.name}</h1>
+                        <h1>{this.props.data.recipe.name}</h1>
                         <p>{serving} serving</p>
                         <ul className="recipe-view-shit">
                             <li>{Math.floor(calories)}<br/>calories</li>

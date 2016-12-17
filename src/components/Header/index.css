@@ -1,5 +1,5 @@
 .header {
-    height: 50px;
+    height: 80px;
     z-index: 1000;
     display: flex;
     /*max-width: 1000px;*/
@@ -12,8 +12,12 @@
     flex: 1;
 }
 
-.header-logo, .header-avatar {
-    height: 20px;
+.header-logo {
+    height: 30px;;
+}
+
+.header-avatar {
+    height: 50px;
 }
 
 .header-nav {
@@ -23,6 +27,7 @@
     font-family: Roboto, sans-serif;
     text-transform: uppercase;
     align-items: center;
+    color: dimgray;
 }
 
 .header-nav > li {
