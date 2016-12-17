@@ -19,7 +19,7 @@
     display: flex;
     list-style-type: none;
     margin: 0;
-    font-face: Roboto;
+    font-family: Roboto, sans-serif;
     text-transform: uppercase;
     align-items: center;
 }
