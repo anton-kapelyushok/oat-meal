@@ -19,7 +19,7 @@ export const submitNewGoal = () => (dispatch, getState) => {
     const goal = getState().ration.currentGoal;
     const showingGoal = getState().ration.showingGoal;
     const loadingStatus = getState().ration.loadingStatus;
-    if (loadingStatus !== LoadingStatus.INITIAL && goal === showingGoal) {
+    if ((loadingStatus !== LoadingStatus.INITIAL  && loadingStatus !== LoadingStatus.ERROR) && goal === showingGoal) {
         return;
     }
     dispatch({ type: START_RECIPES_FETCHING });

@@ -19,7 +19,7 @@ export default class RecipeView extends Component {
         const doomLevel = this.props.doomed ? 0.6 : 0.3;
 
         return (
-            <div className="recipe-view-overlay">
+            <div className="recipe-view-overlay" onClick={(this.props.onRecipeHide)}>
                 <div className="recipe-view-wrapper" style={{ backgroundImage: `url(${this.props.data.recipe.data.image})` }}>
                     <div onClick={(this.props.onRecipeHide)} className="recipe-view-wrapper-close">
                     <i className="icon material-icons">clear</i>

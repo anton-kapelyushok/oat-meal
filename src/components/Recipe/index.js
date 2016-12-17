@@ -33,7 +33,7 @@ export default class Recipe extends Component {
                     </ul>
                 </div>
                 <div className="recipe-actions">
-                    <a className="recipe-addtobookmark" onClick={this.props.onRecipeNext}>Add to bookmark<i className="icon material-icons">bookmark</i></a>
+                    <a className="recipe-addtobookmark" onClick={this.props.onRecipeNext}>Refresh<i className="icon material-icons">refresh</i></a>
                     <a className="recipe-learnmore" onClick={this.props.onRecipeShow}>Learn more</a>
                 </div>
             </div>

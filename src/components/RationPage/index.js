@@ -5,6 +5,9 @@ import NutrionChart from '../NutrionChart';
 import ConfigurationBar from '../ConfigurationBar';
 import RecipeView from '../RecipeView';
 
+import loadingGif from '../../loading.gif';
+import errorJpg from '../../error.jpg';
+
 import * as LoadingState from '../../constants/loading-status';
 
 import './index.css';
@@ -35,15 +38,25 @@ export default class RationPage extends Component {
                 <ConfigurationBar currentGoal={this.props.currentGoal}
                                   onGoalChanged = {this.handleGoalChange.bind(this)}
                                   onGoalSubmit = {this.props.onGoalSubmit}/>
-                <NutrionChart data={this.props.currentGoal}/>
-                <div>
-                    {JSON.stringify(this.props.summary)}
-                </div>
-                <div>
-                     {this.props.loadingStatus === LoadingState.LOADED && recipePart}
-                     {this.props.loadingStatus === LoadingState.LOADING && "loading"}
-                     {this.props.loadingStatus === LoadingState.ERROR && "error"}
-                </div>
+                    {   this.props.loadingStatus === LoadingState.LOADED &&
+                    <div className="Row">
+                        <div className="Column">
+                            <div>
+                                {recipePart}
+                            </div>
+                        </div>
+                        <div className="Column nutrion-chart">
+                            <NutrionChart data={this.props.recipes}/>
+                        </div>
+                    </div>}
+
+                    {   this.props.loadingStatus === LoadingState.LOADING &&
+                    <div className="centeredImg">
+                        <img style={{ margin: 'auto', marginTop: 20 }}src={loadingGif} /></div> }
+
+                    {   this.props.loadingStatus === LoadingState.ERROR &&
+                    <div className="centeredImg">
+                    <img style={{ margin: 'auto', marginTop: 20 }}src={errorJpg} /></div>  }
                 </div>
             </div>
         );

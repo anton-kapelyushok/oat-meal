@@ -4,7 +4,7 @@
     display: flex;
     /*max-width: 1000px;*/
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: #fbc620;
     padding-left: 20px;
@@ -12,8 +12,21 @@
     flex: 1;
 }
 
+
+.header-logo-container {
+     display: flex;
+     flex: 1;
+     justify-content: flex-start;
+ }
+
+.header-avatar-container {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
 .header-logo {
-    height: 30px;;
+    height: 30px;
 }
 
 .header-avatar {
@@ -28,6 +41,9 @@
     text-transform: uppercase;
     align-items: center;
     color: dimgray;
+    padding: 0;
+    flex: 1;
+    justify-content: center;
 }
 
 .header-nav > li {

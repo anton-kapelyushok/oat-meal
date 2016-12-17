@@ -14,8 +14,7 @@ const mapStateToProps = state => ({
     recipes: state.ration.all.map((choices, i) => choices[state.ration.selectedIndices[i]]),
     loadingStatus: state.ration.loadingStatus,
     showRecipe: state.ration.showRecipe,
-    recipeToShow: state.ration.showingRecipe,
-    summary: state.ration.summary,
+    recipeToShow: state.ration.showingRecipe
 });
 
 const mapDispatchToProps = dispatch => ({

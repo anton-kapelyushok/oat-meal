@@ -1,6 +1,5 @@
 .recipe {
-  height: 120px;
-  width: 500px;
+  height: 100px;
   background-color: gray;
   list-style-type: none;
   display: flex;
@@ -20,11 +19,11 @@
 
 .recipe-title {
  width: 350px;
- height: 100px;
+ height: 80px;
  line-height: 1.5em;
      height: 3em;       /* height is 2x line-height, so two lines will display */
      overflow: hidden;
-  font-size: 24px;
+  font-size: 20px;
   text-transform: uppercase;
 
 text-overflow: ellipsis;
@@ -64,6 +63,7 @@ text-overflow: ellipsis;
   display: flex;
   text-align: right;
   align-items: center;
+    user-select: none;
 }
 
 .recipe-addtobookmark .icon {

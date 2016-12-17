@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import RationContainer from './containers/RationContainer';
+import LoginContainer from './containers/LoginContainer';
+import ProfileContainer from './containers/ProfileContainer';
 import './index.css';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
@@ -17,6 +19,8 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={browserHistory}>
         <Route path="/" component={RationContainer} />
+      <Route path="login" component={LoginContainer} />
+      <Route path="profile" component={ProfileContainer} />
     </Router>
   </Provider>,
   document.getElementById('root')

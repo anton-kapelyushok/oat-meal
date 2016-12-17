@@ -22,4 +22,25 @@ body {
 
 .content {
     flex: 1;
+    width: 1300px;
+    margin: auto;
+}
+
+
+.loginFiller {
+    background-image: url("login.jpg");
+    background-size: cover !important;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+.profileFiller {
+    background-image: url("profile.jpg");
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center center;
+    width: 100vw;
+    height: 100vh;
 }
