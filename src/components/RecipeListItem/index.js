@@ -16,18 +16,27 @@ export default class RecipeListItem extends Component {
         console.log('handleClick()', i);
         this.setState({ i });
     }
+
     render () {
         console.log(this.props.data);
         const length = this.props.data.length;
         return (
             <li className="recipe-list-item">
-                <Recipe onRecipeShow={() => this.props.onShowRecipe && this.props.onShowRecipe(this.props.data[0])} data={this.props.data[0]} />
+                <Recipe
+                    onRecipeShow={
+                        () => this.props.onShowRecipe &&
+                                this.props.onShowRecipe(this.props.data)
+                    }
+                    onRecipeNext={this.props.onShuffle}
+                    data={this.props.data}
+                    />
             </li>
         );
     }
 }
 
 RecipeListItem.propTypes = {
-    data: PropTypes.array.isRequired,
+    data: PropTypes.object.isRequired,
     onShowRecipe: PropTypes.func,
+    onShuffle: PropTypes.func,
 };

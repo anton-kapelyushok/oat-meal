@@ -7,6 +7,7 @@ import {
     RECIPES_FETCHING_ERROR_OCCURED,
     RECIPE_SHOW_PRESSED,
     RECIPE_HIDE_PRESSED,
+    SHUFFLE_RECIPE,
  } from '../constants/action-types';
 import * as LoadingStatus from '../constants/loading-status';
 export const changeCurrentGoal = (newGoal) => ({
@@ -43,4 +44,9 @@ export const showRecipe = recipe => ({
 
 export const hideRecipe = () => ({
     type: RECIPE_HIDE_PRESSED,
+});
+
+export const shuffle = index => ({
+    type: SHUFFLE_RECIPE,
+    index,
 });

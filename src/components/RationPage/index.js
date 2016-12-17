@@ -19,8 +19,8 @@ export default class RationPage extends Component {
                             {this.props.recipes &&
                                 <RecipeList
                                     recipes={this.props.recipes}
-                                    replacements={this.props.replacements}
                                     onShowRecipe={this.props.onShowRecipe}
+                                    onShuffle={this.props.onShuffle}
                                 />}
                          </div>);
         return (
@@ -37,14 +37,7 @@ export default class RationPage extends Component {
                                   onGoalSubmit = {this.props.onGoalSubmit}/>
                 <NutrionChart data={this.props.currentGoal}/>
                 <div>
-                    {Math.round(this.props.recipes.map(recipe => recipe.recipe.calories * recipe.serving).reduce((el, r) => el + r, 0))}
-                    <br/>
-                    {Math.round(this.props.recipes.map(recipe => recipe.recipe.carbs * recipe.serving).reduce((el, r) => el + r, 0))}
-                    <br/>
-                    {Math.round(this.props.recipes.map(recipe => recipe.recipe.protein * recipe.serving).reduce((el, r) => el + r, 0))}
-                    <br/>
-                    {Math.round(this.props.recipes.map(recipe => recipe.recipe.fat * recipe.serving).reduce((el, r) => el + r, 0))}
-                    <br/>
+                    {JSON.stringify(this.props.summary)}
                 </div>
                 <div>
                      {this.props.loadingStatus === LoadingState.LOADED && recipePart}
@@ -59,9 +52,7 @@ export default class RationPage extends Component {
 
 RationPage.propTypes = {
     recipes: PropTypes.array,
-    replacements: PropTypes.array,
     currentGoal: PropTypes.object,
-    summary: PropTypes.object,
     loadingStatus: PropTypes.string.isRequired,
     showRecipe: PropTypes.bool.isRequired,
     recipeToShow: PropTypes.object.isRequired,
@@ -69,4 +60,5 @@ RationPage.propTypes = {
     onGoalChanged: PropTypes.func.isRequired,
     onRecipeHide: PropTypes.func,
     onShowRecipe: PropTypes.func,
+    onShuffle: PropTypes.func,
 };

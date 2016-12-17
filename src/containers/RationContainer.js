@@ -5,16 +5,17 @@ import {
     changeCurrentGoal,
     showRecipe,
     hideRecipe,
+    shuffle,
 } from '../actions';
 
 
 const mapStateToProps = state => ({
     currentGoal: state.ration.currentGoal,
-    recipes: state.ration.recipes,
-    replacements: state.ration.replacements,
+    recipes: state.ration.all.map((choices, i) => choices[state.ration.selectedIndices[i]]),
     loadingStatus: state.ration.loadingStatus,
     showRecipe: state.ration.showRecipe,
     recipeToShow: state.ration.showingRecipe,
+    summary: state.ration.summary,
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -22,6 +23,7 @@ const mapDispatchToProps = dispatch => ({
     onGoalSubmit: () => dispatch(submitNewGoal()),
     onShowRecipe: recipe => dispatch(showRecipe(recipe)),
     onRecipeHide: () => dispatch(hideRecipe()),
+    onShuffle: index => dispatch(shuffle(index)),
 });
 
 export const RationPageContainer = connect(
