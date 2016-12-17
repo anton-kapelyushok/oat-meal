@@ -1,5 +1,5 @@
 .configuration-bar {
-    height: 250px;
+    height: 200px;
     display: flex;
     /*max-width: 1000px;*/
     flex-direction: row;
@@ -9,65 +9,119 @@
     padding-right: 20px;
     flex: 1;
 }
+
 .configuration-bar .item {
-    height: 230px;
+    height: 180px;
 }
 
-.configuration-bar .border {
-    border: 1px solid gray;
+.configuration-bar .border-right {
+    border-right: 1px solid gray;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
 }
 
+.configuration-bar .border-left {
+    border-left: 1px solid gray;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
 
 .sliders-bar {
-    width: 40%;
+    width: 50%;
+    flex-direction: row;
     margin-left: 10%;
     margin-top: 20px;
 }
 
 .meals-amount-bar {
-    width: 20%;
-    margin-left: 10px;
-    margin-top: 20px;
-}
-
-.run-generation-button {
-    width: 20%;
-    margin-left: 10px;
+    width: 30%;
     margin-right: 10%;
     margin-top: 20px;
 }
 
-
-.round-button {
-    width:50%;
+.meals-amount {
 }
-.round-button-circle {
+
+.meals-amount-text {
+    font-family: Roboto, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 44px;
+    color: dimgray;
+}
+
+.run-generation-button {
     width: 100%;
-    height:0;
-    padding-bottom: 100%;
-    border-radius: 50%;
-    border:10px solid wheat;
-    overflow:hidden;
+    margin-top: 10%;
+    height: 100px;
+    margin-bottom: 10%;
+    color: dimgray;
+}
 
+.run-button {
+    width: 100%;
+    height: 100%;
+    background-color: #fbc620;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    font-family: Roboto, sans-serif;
+}
+
+.Row {
+    display: table;
+    width: 100%; /*Optional*/
+    table-layout: fixed; /*Optional*/
+    border-spacing: 10px; /*Optional*/
+}
+
+.Column {
+    display: table-cell;
+}
+
+.meal-part {
+}
+
+.current-target {
+    width: 15%;
+    font-family: Roboto, sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+.current-target-header {
+    color: dimgray;
+    font-size: 16px;
+}
+
+.goals-calories {
+    color: dimgray;
+    font-size: 44px;
+}
+
+.calories-label {
+    color: dimgray;
+    font-size: 24px;
+}
+
+.meal-selected {
     background: #fbc620;
-    box-shadow: 0 0 3px gray;
+    border-radius: 50%;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 100%;
 }
-.round-button-circle:hover {
-    background: #fbc660;
-}
-.round-button a {
-    display:block;
-    float:left;
-    width:100%;
-    padding-top:50%;
-    padding-bottom:50%;
-    line-height:1em;
-    margin-top:-0.5em;
 
-    text-align:center;
-    color:#e2eaf3;
-    font-family:Verdana;
-    font-size:1.2em;
-    font-weight:bold;
-    text-decoration:none;
+.meal-empty {
+    background: dimgray;
+    border-radius: 50%;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 100%;
 }

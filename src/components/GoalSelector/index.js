@@ -16,6 +16,7 @@ export default class GoalSelector extends Component {
                         <Slider
                             min={it.min}
                             max={it.max}
+                            color = {it.color}
                             value={this.props.currentGoal[it.name]}
                             onChange={this.handleGoalChanged.bind(this, it.name)}
                         />
@@ -34,24 +35,28 @@ GoalSelector.propTypes = {
 
 const defaultGoalProperties = [{
     name: 'calories',
-    visibleName: 'calories',
+    visibleName: 'CALORIES',
     min: 0,
     max: 2500,
+    color: '#fbc620'
 }, {
     name: 'protein',
-    visibleName: 'squirrels',
+    visibleName: 'PROTS',
     min: 0,
     max: 400,
+    color: '#fbc620'
 }, {
     name: 'carbs',
-    visibleName: 'carbowhatever',
+    visibleName: 'CARBS',
     min: 0,
     max: 400,
+    color: '#fbc620'
 }, {
     name: 'fat',
-    visibleName: 'fats',
+    visibleName: 'FATS',
     min: 0,
     max: 250,
+    color: '#fbc620'
 }];
 
 const defaultCurrentGoal = {
