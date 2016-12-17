@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import logo from '../../logo.png';
+import logo from '../../logo.svg';
+import user from '../../user.png';
 import './index.css';
 
 export default class Header extends Component {
@@ -15,7 +16,7 @@ export default class Header extends Component {
                     </li>);
                 })}
             </ul>
-            <img className="header-avatar" src={logo} />
+            <img className="header-avatar" src={user} />
         </nav>
     );
     }

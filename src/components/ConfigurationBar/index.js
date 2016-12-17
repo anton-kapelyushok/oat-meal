@@ -71,3 +71,8 @@ export default class ConfigurationBar extends Component {
     }
 
 }
+ConfigurationBar.propTypes = {
+    currentGoal: PropTypes.object,
+    onGoalSubmit: PropTypes.func,
+    onGoalChanged: PropTypes.func.isRequired
+};
