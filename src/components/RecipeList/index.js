@@ -20,7 +20,7 @@ export default class RecipeList extends Component {
                         return;
                     }
                     result.push(<RecipeListDivider name={meal}/>);
-                    mealRecipes[meal].forEach(recipe => result.push(<RecipeListItem data={recipe} />));
+                    mealRecipes[meal].forEach(recipe => result.push(<RecipeListItem data={recipe} onShowRecipe={this.props.onShowRecipe}/>));
                     return result;
                 })}
             </ul>
@@ -31,4 +31,5 @@ export default class RecipeList extends Component {
 RecipeList.propTypes = {
     recipes: PropTypes.array.isRequired,
     replacements: PropTypes.array,
+    onShowRecipe: PropTypes.func,
 };

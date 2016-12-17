@@ -5,6 +5,8 @@ import {
     START_RECIPES_FETCHING,
     RECIPES_FETCHED,
     RECIPES_FETCHING_ERROR_OCCURED,
+    RECIPE_SHOW_PRESSED,
+    RECIPE_HIDE_PRESSED,
  } from '../constants/action-types';
 import * as LoadingStatus from '../constants/loading-status';
 export const changeCurrentGoal = (newGoal) => ({
@@ -32,3 +34,13 @@ export const submitNewGoal = () => (dispatch, getState) => {
     .then(data => dispatch({ type: RECIPES_FETCHED, goal, data }))
     .catch(error => dispatch({ type: RECIPES_FETCHING_ERROR_OCCURED, goal, error }));
 };
+
+
+export const showRecipe = recipe => ({
+    type: RECIPE_SHOW_PRESSED,
+    recipe,
+});
+
+export const hideRecipe = () => ({
+    type: RECIPE_HIDE_PRESSED,
+});

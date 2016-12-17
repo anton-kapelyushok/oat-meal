@@ -21,7 +21,7 @@ export default class RecipeListItem extends Component {
         const length = this.props.data.length;
         return (
             <li className="recipe-list-item">
-                <Recipe data={this.props.data[0]} />
+                <Recipe onRecipeShow={() => this.props.onShowRecipe && this.props.onShowRecipe(this.props.data[0])} data={this.props.data[0]} />
             </li>
         );
     }
@@ -29,4 +29,5 @@ export default class RecipeListItem extends Component {
 
 RecipeListItem.propTypes = {
     data: PropTypes.array.isRequired,
+    onShowRecipe: PropTypes.func,
 };

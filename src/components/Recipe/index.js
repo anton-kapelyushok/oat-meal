@@ -34,7 +34,7 @@ export default class Recipe extends Component {
                 </div>
                 <div className="recipe-actions">
                     <a className="recipe-addtobookmark">Add to bookmark<i className="icon material-icons">bookmark</i></a>
-                    <a className="recipe-learnmore">Learn more</a>
+                    <a className="recipe-learnmore" onClick={this.props.onRecipeShow}>Learn more</a>
                 </div>
             </div>
             </div>
@@ -46,4 +46,5 @@ Recipe.propTypes = {
     data: PropTypes.object.isRequired,
     additional: PropTypes.object,
     doomed: PropTypes.bool,
+    onRecipeShow: PropTypes.func,
 };

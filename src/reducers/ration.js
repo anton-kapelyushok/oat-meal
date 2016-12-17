@@ -3,6 +3,8 @@ import {
     START_RECIPES_FETCHING,
     RECIPES_FETCHED,
     RECIPES_FETCHING_ERROR_OCCURED,
+    RECIPE_SHOW_PRESSED,
+    RECIPE_HIDE_PRESSED,
 } from '../constants/action-types';
 
 import {
@@ -26,6 +28,8 @@ const initialState = {
     currentGoal: { ...defaultGoal },
     showingGoal: { ...defaultGoal },
     loadingStatus: INITIAL,
+    showRecipe: false,
+    showingRecipe: null,
 };
 
 export const reducer = (state = initialState, action) => {
@@ -56,6 +60,17 @@ export const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 loadingStatus: ERROR,
+            };
+        case RECIPE_SHOW_PRESSED:
+            return {
+                ...state,
+                showRecipe: true,
+                showingRecipe: action.recipe,
+            };
+        case RECIPE_HIDE_PRESSED:
+            return {
+                ...state,
+                showRecipe: false,
             };
         default:
             return state;

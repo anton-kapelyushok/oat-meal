@@ -1,0 +1,125 @@
+.recipe-view-overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+}
+
+.recipe-view-wrapper {
+    position: relative;
+    width: 900px;
+    height: 600px;
+    display: flex;
+    left: calc(50% - 450px);
+    top: calc(50% - 300px + 25px);
+    background-image: url(https://www.baistzviyosef.com/wp-content/uploads/2015/10/meal.jpg);
+    background-size: cover !important;
+    background-position: center center;
+    justify-content: flex-end;
+}
+
+.recipe-view-content {
+    padding: 8px;
+    background-color: white;
+    width: 40%;
+    left: 60%;
+    top: 0;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.recipe-view-content h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 32px;
+}
+
+.recipe-view-content h2 {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.recipe-view-content p {
+    margin-top: 5px;
+}
+
+.recipe-view-content .recipe-view-shit {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.recipe-view-content .recipe-view-shit > li  {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.recipe-view-content .recipe-view-ingredients {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recipe-view-content .recipe-view-ingredients > li {
+    list-style-type: none;
+    padding-top: px;
+    margin-top: 8px;
+}
+
+.recipe-view-content a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: auto;
+    margin-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #fbc620;
+    text-transform: uppercase;
+    font-size: 32px;
+    width: 300px;
+    height: 80px;
+    text-align: center;
+    color: black !important;
+    text-decoration: none !important;
+}
+
+.recipe-view-wrapper-close {
+    position: absolute;
+    float: right;
+    color: white;
+    top: 0;
+    left: calc(100% - 15px);
+    top: calc(0% - 10px);
+    z-index: 10000;
+    border-radius: 15px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    cursor: pointer;
+}

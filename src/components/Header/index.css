@@ -1,5 +1,6 @@
 .header {
     height: 50px;
+    z-index: 1000;
     display: flex;
     /*max-width: 1000px;*/
     flex-direction: row;
