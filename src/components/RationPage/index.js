@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react';
-import GoalSelector from '../GoalSelector';
-import NutrionChart from '../NutrionChart';
 import RecipeList from '../RecipeList';
 import Header from '../Header';
+import NutrionChart from '../NutrionChart';
+import ConfigurationBar from '../ConfigurationBar';
 
 import * as LoadingState from '../../constants/loading-status';
 
@@ -24,21 +24,21 @@ export default class RationPage extends Component {
         return (
             <div className="pageWrapper">
                 <Header selectedTabNumber={1}/>
+                <ConfigurationBar currentGoal={this.props.currentGoal}
+                                  onGoalChanged = {this.handleGoalChange.bind(this)}
+                                  onGoalSubmit = {this.props.onGoalSubmit}/>
+                <NutrionChart data={this.props.currentGoal}/>
                 <div>
-                    <NutrionChart data={this.props.currentGoal}/>
-                    <GoalSelector
-                        onGoalChanged={this.handleGoalChange.bind(this)}
-                        currentGoal={this.props.currentGoal}
-                     />
-                         {Math.round(this.props.recipes.map(recipe => recipe.recipe.calories * recipe.serving).reduce((el, r) => el + r, 0))}
-                         <br/>
-                         {Math.round(this.props.recipes.map(recipe => recipe.recipe.carbs * recipe.serving).reduce((el, r) => el + r, 0))}
-                        <br/>
-                         {Math.round(this.props.recipes.map(recipe => recipe.recipe.protein * recipe.serving).reduce((el, r) => el + r, 0))}
-                        <br/>
-                         {Math.round(this.props.recipes.map(recipe => recipe.recipe.fat * recipe.serving).reduce((el, r) => el + r, 0))}
-                         <br/>
-                     <button onClick={this.props.onGoalSubmit}>Submit</button>
+                    {Math.round(this.props.recipes.map(recipe => recipe.recipe.calories * recipe.serving).reduce((el, r) => el + r, 0))}
+                    <br/>
+                    {Math.round(this.props.recipes.map(recipe => recipe.recipe.carbs * recipe.serving).reduce((el, r) => el + r, 0))}
+                    <br/>
+                    {Math.round(this.props.recipes.map(recipe => recipe.recipe.protein * recipe.serving).reduce((el, r) => el + r, 0))}
+                    <br/>
+                    {Math.round(this.props.recipes.map(recipe => recipe.recipe.fat * recipe.serving).reduce((el, r) => el + r, 0))}
+                    <br/>
+                </div>
+                <div>
                      {this.props.loadingStatus === LoadingState.LOADED && recipePart}
                      {this.props.loadingStatus === LoadingState.LOADING && "loading"}
                      {this.props.loadingStatus === LoadingState.ERROR && "error"}
