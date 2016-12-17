@@ -61,6 +61,7 @@ RationPage.propTypes = {
     recipes: PropTypes.array,
     replacements: PropTypes.array,
     currentGoal: PropTypes.object,
+    summary: PropTypes.object,
     loadingStatus: PropTypes.string.isRequired,
     showRecipe: PropTypes.bool.isRequired,
     recipeToShow: PropTypes.object.isRequired,

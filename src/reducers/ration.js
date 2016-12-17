@@ -27,6 +27,7 @@ const initialState = {
     replacements: [],
     currentGoal: { ...defaultGoal },
     showingGoal: { ...defaultGoal },
+    summary: default,
     loadingStatus: INITIAL,
     showRecipe: false,
     showingRecipe: null,
