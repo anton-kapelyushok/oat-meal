@@ -8,7 +8,7 @@
     "eslint-plugin-react": "^6.8.0",
     "react-scripts": "0.8.4"
   },
-  "proxy": "http://oatmeal-env.vticm5kpgz.eu-west-1.elasticbeanstalk.com/ration",
+  "proxy": "http://oatmeal-env.vticm5kpgz.eu-west-1.elasticbeanstalk.com",
   "dependencies": {
     "fetch": "^1.1.0",
     "nuka-carousel": "^2.0.3",
